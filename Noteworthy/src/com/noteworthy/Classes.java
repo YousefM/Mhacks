@@ -22,6 +22,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -44,6 +47,16 @@ public class Classes extends ListActivity {
         android.app.ActionBar bar = getActionBar();
         bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#0099FF")));
         ListView listview = (ListView) findViewById(android.R.id.list);
+        
+        listview.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				Intent intent = new Intent(Classes.this, CalendarActivity.class);
+				startActivity(intent);
+				// TODO Auto-generated method stub
+			}
+		});
         
   
 			try {
@@ -87,9 +100,7 @@ public class Classes extends ListActivity {
 						Log.v("AppWoo", course.getString("courseName"));
 						Log.v("AppWoo", course.getString("profName"));
 						Log.v("AppWoo", course.getString("schoolName"));
-//						list1.add(course.getString("courseName"));
-//						list2.add(course.getString("profName"));
-//						list3.add(course.getString("schoolName"));
+
 						fluff(course);
 					}
                 } 
@@ -98,23 +109,16 @@ public class Classes extends ListActivity {
                 }
 			}
 		});
-		
-		
-		
-		Log.v("asdf", String.valueOf(this.list1.size()));
 		}
 	
 	public void fluff(ParseObject course) {
+		list.clear();
 		Log.v("asdfasdfasdfas", course.getString("courseName"));
 		list1.add(course.getString("courseName"));
 		list2.add(course.getString("profName"));
 		list3.add(course.getString("schoolName"));
 
-		Log.v("Size1", String.valueOf(list1.size()));
-		Log.v("Size2", String.valueOf(list2.size()));
-		Log.v("Size3", String.valueOf(list3.size()));
-		
-		if(list1.size() == 3){
+		if(list1.size() > 0){
 			for(int i = 0; i < list1.size(); i++) {
 				HashMap<String,String> temp = new HashMap<String,String>();
 
@@ -122,32 +126,22 @@ public class Classes extends ListActivity {
 				temp.put("prof", list2.get(i));
 				temp.put("school", list3.get(i));
 				
-				
 				list.add(temp);
 			}
 			
-			Log.v("Size11111", String.valueOf(list1.size()));
-			Log.v("Size22222", String.valueOf(list2.size()));
-			Log.v("Size33333", String.valueOf(list3.size()));
-			
-			for(int j = 0; j < list.size(); j++){
-				Log.v("Class", list.get(j).get("class").toString());
-				Log.v("Teacher", list.get(j).get("prof").toString());
-				Log.v("School", list.get(j).get("school").toString());
-			}
 			adapter = new SimpleAdapter(this, list, R.layout.custom_row_view, new String[]
 					{"class","prof", "school"}, new int[] {R.id.header, R.id.text1, R.id.text2});
 	      setListAdapter(adapter);
-			
 		}
 	}
 	
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.classes, menu);
         return true;
+        
+        
     }
 
 
@@ -161,21 +155,34 @@ public class Classes extends ListActivity {
         	createAddToast();
             return true;
         }
+        
+        if (id == R.id.item2) {
+        	Intent i = new Intent(this, Profile.class);
+        	startActivity(i);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
     public boolean createAddToast() {
 
-        CharSequence colors[] = new CharSequence[] {"Class", "Notes"};
+        CharSequence courses[] = new CharSequence[] {"Class", "Notes"};
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("What do you want to add?");
-        builder.setItems(colors, new DialogInterface.OnClickListener() {
+        builder.setItems(courses, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
             	if (which == 0){
             		
                 	Intent myIntent = new Intent(Classes.this, AddClass.class);
+                	//myIntent.putExtra("key", value); //Optional parameters
+                	Classes.this.startActivity(myIntent);   
+            	}
+            	
+            	else if (which == 1){
+            		
+                	Intent myIntent = new Intent(Classes.this, PhotoActivity.class);
                 	//myIntent.putExtra("key", value); //Optional parameters
                 	Classes.this.startActivity(myIntent);   
             	}

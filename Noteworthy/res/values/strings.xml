@@ -24,5 +24,17 @@
     <string name="title_course">Course</string>
     <string name="title_professor">Professor</string>
     <string name="emptyList">No Classes</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="profile">Profile</string>
+    <string name="contributions">Contributions</string>
+    <string name="credits">Credits</string>
+    <string name="logout">Logout</string>
+    <string name="title_activity_calendar">CalendarActivity</string>
+    <string name="camera">Take a picture</string>
+    <string name="title_activity_contributor_adapter">ContributorAdapter</string>
+    <string name="add_notes">Add Notes</string>
+    <string name="title_activity_photo">PhotoActivity</string>
+    <string name="title_activity_note_description">NoteDescription</string>
+    <string name="noteTitle">NoteDescription</string>
 
 </resources>

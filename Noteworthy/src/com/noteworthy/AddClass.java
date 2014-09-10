@@ -5,6 +5,7 @@ import com.parse.ParseObject;
 import com.parse.ParseUser;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -41,6 +42,8 @@ public class AddClass extends ActionBarActivity {
         textView.setAdapter(adapter1);
  
  }
+ 
+ 
  public void finishedAddingClass(View v) {
 	 ParseUser user = ParseUser.getCurrentUser();
 	 ParseObject course = new ParseObject("Courses");
