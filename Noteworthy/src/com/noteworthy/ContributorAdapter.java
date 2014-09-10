@@ -13,7 +13,11 @@ import android.widget.TextView;
 
 public class ContributorAdapter extends ArrayAdapter<Contributor> {
     
+<<<<<<< HEAD
 	 
+=======
+
+>>>>>>> 68748c70c33e7718ceb02020669880c80826ea39
 	ArrayList<Contributor> contributors;
 	
 	public ContributorAdapter(Context context, int calendarListItem, ArrayList<Contributor> contributors) {
@@ -23,11 +27,20 @@ public class ContributorAdapter extends ArrayAdapter<Contributor> {
 		
     }
     
+<<<<<<< HEAD
+=======
+
+>>>>>>> 68748c70c33e7718ceb02020669880c80826ea39
 	@Override
 	public Contributor getItem(int position) {
 		// TODO Auto-generated method stub
 		return contributors.get(position);
 	}
+<<<<<<< HEAD
+=======
+	
+
+>>>>>>> 68748c70c33e7718ceb02020669880c80826ea39
     
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -50,4 +63,8 @@ public class ContributorAdapter extends ArrayAdapter<Contributor> {
        // Return the completed view to render on screen
        return convertView;
    }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 68748c70c33e7718ceb02020669880c80826ea39

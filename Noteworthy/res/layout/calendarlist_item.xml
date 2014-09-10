@@ -4,7 +4,11 @@
 	android:layout_height="?android:attr/listPreferredItemHeight"
 	android:padding="6dip" >
     
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 68748c70c33e7718ceb02020669880c80826ea39
     <ImageView
     android:id="@+id/profilePicture"
     android:layout_width="wrap_content"
@@ -12,17 +16,27 @@
     android:layout_alignParentBottom="true"
     android:layout_alignParentTop="true"
     android:layout_marginRight="6dip"
+<<<<<<< HEAD
     android:layout_marginEnd="6dip"
     android:contentDescription="TODO"
     android:src="@drawable/ic_launcher" />
  
+=======
+    android:contentDescription="TODO"
+    android:src="@drawable/ic_launcher" />
+
+>>>>>>> 68748c70c33e7718ceb02020669880c80826ea39
 <TextView
     android:id="@+id/nameLine"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentTop="true"
+<<<<<<< HEAD
     android:layout_toRightOf="@+id/profilePicture"
     android:layout_toEndOf="@+id/profilePicture"
+=======
+    android:layout_toRightOf="@+id/icon"
+>>>>>>> 68748c70c33e7718ceb02020669880c80826ea39
     android:gravity="center_vertical"
     android:text="Name"
     android:textSize="16sp" />
@@ -33,21 +47,32 @@
     android:layout_height="26dip"
     android:layout_alignParentBottom="true"
     android:layout_alignParentRight="true"
+<<<<<<< HEAD
     android:layout_alignParentEnd="true"
     android:layout_toRightOf="@id/profilePicture"
     android:layout_toEndOf="@+id/profilePicture"
+=======
+    android:layout_toRightOf="@id/icon"
+>>>>>>> 68748c70c33e7718ceb02020669880c80826ea39
     android:ellipsize="marquee"
     android:singleLine="true"
     android:text="Today's contributions"
     android:textSize="12sp" />
+<<<<<<< HEAD
  
  
  
+=======
+
+
+
+>>>>>>> 68748c70c33e7718ceb02020669880c80826ea39
 <TextView
     android:id="@+id/numberOfContributions"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_alignParentRight="true"
+<<<<<<< HEAD
     android:layout_alignParentEnd="true"
     android:layout_centerVertical="true"
     android:text="2"
@@ -55,3 +80,10 @@
     android:layout_marginEnd="20dip" />
     
 </RelativeLayout>
+=======
+    android:layout_centerVertical="true"
+    android:text="2"
+    android:layout_marginRight="20dip" />
+    
+</RelativeLayout>
+>>>>>>> 68748c70c33e7718ceb02020669880c80826ea39

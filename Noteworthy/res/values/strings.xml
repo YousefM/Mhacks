@@ -24,6 +24,7 @@
     <string name="title_course">Course</string>
     <string name="title_professor">Professor</string>
     <string name="emptyList">No Classes</string>
+<<<<<<< HEAD
     <string name="title_activity_profile">Profile</string>
     <string name="profile">Profile</string>
     <string name="contributions">Contributions</string>
@@ -36,5 +37,8 @@
     <string name="title_activity_photo">PhotoActivity</string>
     <string name="title_activity_note_description">NoteDescription</string>
     <string name="noteTitle">NoteDescription</string>
+=======
+    <string name="title_activity_calendar">CalendarActivity</string>
+>>>>>>> 68748c70c33e7718ceb02020669880c80826ea39
 
 </resources>

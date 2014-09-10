@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -22,11 +23,21 @@
         android:layout_gravity="center_vertical"
         android:text="Top Notes" >
 	</TextView>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    
+>>>>>>> 68748c70c33e7718ceb02020669880c80826ea39
     
         
     <ListView
         android:id="@+id/contributorsList"
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="match_parent"
         android:layout_gravity="bottom" 
         android:layout_weight="60"
@@ -47,3 +58,14 @@
         android:onClick="openNotes"/>
 
 </LinearLayout>
+=======
+        android:layout_height="fill_parent"
+        android:layout_gravity="bottom" />
+    
+    
+    
+    
+    
+
+</LinearLayout>
+>>>>>>> 68748c70c33e7718ceb02020669880c80826ea39
